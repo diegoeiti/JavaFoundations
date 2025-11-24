@@ -25,5 +25,8 @@ public class VariaveisRegras {
 
         System.out.println(nomeCompleto + nome_completo);
 
+        //Nao podemos usar palavras reservadas como variaveis
+        String string = "Diego";
+
     }
 }
