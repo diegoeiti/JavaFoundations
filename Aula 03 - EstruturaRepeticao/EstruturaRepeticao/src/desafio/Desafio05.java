@@ -7,7 +7,7 @@ public class Desafio05 {
         //Fazendo a sequencia de Fibonacci;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Quantos termos da sequência Fibonacci? ");;
+        System.out.println("Quantos termos da sequência Fibonacci? ");
         int numero =  sc.nextInt();
 
         int primeiro = 0;
