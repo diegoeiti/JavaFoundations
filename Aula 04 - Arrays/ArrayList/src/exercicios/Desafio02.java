@@ -7,7 +7,7 @@ public class Desafio02 {
         //Crie uma lista de numeros inteiros.
         //Calcule a soma e a média de todos os números da lista
 
-        ArrayList<Integer> numeros = new ArrayList<>();
+        ArrayList<Integer> numeros = new ArrayList<Integer>();
         numeros.add(1);
         numeros.add(2);
         numeros.add(3);
