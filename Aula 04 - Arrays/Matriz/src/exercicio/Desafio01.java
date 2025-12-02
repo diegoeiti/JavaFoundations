@@ -22,5 +22,6 @@ public class Desafio01 {
         double media = (double) soma / (double) lista_notas.length;
         System.out.println("A média das notas será: " + media + " E a soma será: " + soma);
 
+        sc.close();
     }
 }
