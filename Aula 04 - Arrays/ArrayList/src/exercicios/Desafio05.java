@@ -31,6 +31,8 @@ public class Desafio05 {
             } else {
                 palavras_impares.add(palavra);
             }
+
+
             System.out.println("Palavras pares: " + palavras_pares);
             System.out.println("Palavras impares: " + palavras_impares);
         }

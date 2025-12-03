@@ -36,6 +36,9 @@ public class Desafio04 {
             }
         }
 
+        //Da pra resolver usando removeIf ex:
+        //frutas.removeIf(fruta -> fruta.toUpperCase().contains(letra));
+
         System.out.println("Frutas: " + frutasFiltradas);
 
 
