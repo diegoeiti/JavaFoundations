@@ -58,7 +58,14 @@ public class CrudLanchonete {
                             System.out.println(i + " " + pedidos.get(i));
                         }
                         }
-                    }
+
+                case 3:
+                    System.out.println("-----Atualizar Cadastro-----");
+                    System.out.println("Digite o ID do pedido:");
+                    int idAluno = sc.nextInt();
+
+                    System.out.println("Digite ");
+            }
 
 
 
