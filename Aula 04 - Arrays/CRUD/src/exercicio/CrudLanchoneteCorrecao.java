@@ -1,11 +1,28 @@
 package exercicio;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CrudLanchoneteCorrecao {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> lanches = new ArrayList<>(Arrays.asList(
+                "X-Burger",
+                "X-Egg",
+                "X-Bacon",
+                "X-Salada",
+                "X-Tudo"
+        ));
+
+        ArrayList<Double> menuPrecos = new ArrayList<>(Arrays.asList(
+                22.9,
+                24.9,
+                26.9,
+                26.9,
+                29.9
+        ));
 
         ArrayList<Double> listaValorTotal =  new ArrayList<>();
         ArrayList<Double> listaValorUnitario =  new ArrayList<>();
@@ -27,14 +44,22 @@ public class CrudLanchoneteCorrecao {
 
             switch (opcao) {
                 case 1:
-                    System.out.print("Informe o nome do pedido: ");
-                    String pedido = sc.nextLine();
+
+                    System.out.println("-----Cardápio-----");
+                    for (int i = 0; i<lanches.size();i++) {
+                        System.out.println(i + " - " + lanches.get(i) +  " - " + menuPrecos.get(i));
+                    }
+
+                    System.out.println("Informe o número do lanche");
+                    int indiceLanche =  sc.nextInt();
+                    sc.nextLine();
+
+                    String pedido = lanches.get(indiceLanche);
 
                     System.out.print("Informe a quantidade de lanches: ");
                     int quantidadeLanches = sc.nextInt();
 
-                    System.out.print("Informe o valor do lanche: ");
-                    double valorLanchePedido = sc.nextDouble();
+                    double valorLanchePedido = menuPrecos.get(indiceLanche);
                     sc.nextLine();
 
                     double valorTotalPedido =  valorLanchePedido * quantidadeLanches;
@@ -54,34 +79,37 @@ public class CrudLanchoneteCorrecao {
                         System.out.println("Nenhum pedido foi encontrado.");
                     } else {
                         for (int i = 0; i < listaPedido.size(); i++) {
-                            System.out.println(i + "Lanche: " + listaPedido.get(i)+
-                                                "Quantidade: " +  listaQuantidade.get(i) +
-                                                "Valor Unitario: " + listaValorUnitario.get(i) +
-                                                "Valor Total: " + listaValorTotal.get(i));
+                            System.out.println("ID: " + i + " | Lanche: " + listaPedido.get(i)+
+                                                " | Quantidade: " +  listaQuantidade.get(i) +
+                                                " | Valor Unitario: " + listaValorUnitario.get(i) +
+                                                " | Valor Total: " + listaValorTotal.get(i));
                         }
                     }
                     break;
 
                 case 3:
                     System.out.println("\n----- Atualizar Pedido -----");
-                    System.out.println("Informe o nome do pedido: ");
+                    System.out.println("Informe o ID do pedido: ");
                     int pedidoNumero = sc.nextInt();
                     sc.nextLine();
 
-                    System.out.print("Informe o nome do pedido: ");
-                    String novoPedido = sc.nextLine();
+                    for (int i = 0; i<lanches.size();i++) {
+                        System.out.println(i + " - " + lanches.get(i) +  " - " + menuPrecos.get(i));
+                    }
 
-                    System.out.print("Informe a quantidade de lanches: ");
+                    System.out.print("Informe o lanche do novo pedido: ");
+                    int novoLanche = sc.nextInt();
+
+                    System.out.print("Informe a nova quantidade de lanches: ");
                     int novaQuantidadeLanches = sc.nextInt();
 
-                    System.out.print("Informe o valor do lanche: ");
-                    double novoValorLanchePedido = sc.nextDouble();
+                    double novoValorLanche = menuPrecos.get(novoLanche);
                     sc.nextLine();
 
-                    double novoValorTotalPedido =  novoValorLanchePedido * novaQuantidadeLanches;
+                    double novoValorTotalPedido =  novoValorLanche * novaQuantidadeLanches;
 
-                    listaPedido.set(pedidoNumero, novoPedido);
-                    listaValorUnitario.set(pedidoNumero, novoValorLanchePedido);
+                    listaPedido.set(pedidoNumero, lanches.get(novoLanche));
+                    listaValorUnitario.set(pedidoNumero, menuPrecos.get(novoLanche));
                     listaQuantidade.set(pedidoNumero, novaQuantidadeLanches);
                     listaValorTotal.set(pedidoNumero, novoValorTotalPedido);
 
