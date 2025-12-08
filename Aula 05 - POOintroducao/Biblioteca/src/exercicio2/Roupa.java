@@ -42,7 +42,14 @@ public class Roupa {
         System.out.println("Preco: " + this.preco);
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return
+         "Marca: " + this.marca +
+                "\nTipo='" + this.tipo +
+                "\nTamanho='" + this.tamanho +
+                "\nQuantidade=" + this.quantidade +
+                "\nPreco=" + this.preco +
+                 "\nValor_total: " + this.valorTotalEstoque();
+    }
 }

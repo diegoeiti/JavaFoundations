@@ -5,6 +5,7 @@ public class Main {
 
     Roupa roupa1 = new Roupa("Nike", "camisa", "M", 10, 50.00);
 
+    roupa1.toString();
     roupa1.incrementarQuantidade(20);
     roupa1.mostrarInformacoes();
     roupa1.decrementarQuantidade(10);
