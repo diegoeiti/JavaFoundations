@@ -1,13 +1,38 @@
 package entidades;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MenuLanches {
-    private List<Lanche> cardapio;
+    private ArrayList<Lanche> cardapio = new ArrayList<>();
+
 
     public MenuLanches() {
-        cardapio = new ArrayList<>();
-
+        cardapio.add(new Lanche("X-Bacon", 35));
+        cardapio.add(new Lanche("X-Salada", 30));
+        cardapio.add(new Lanche("X-Tudo", 50));
     }
+
+    public void exibirLanches() {
+        for (int i = 0; i<cardapio.size(); i++) {
+            System.out.println("ID " + i + cardapio.get(i).toString());
+        }
+    }
+
+    //Metodo para retornar um lanche pelo índice
+    public Lanche getLanche(int indice) {
+        if  (indice >= 0 && indice < cardapio.size()) {
+            return cardapio.get(indice);
+        } else {
+            System.out.println("Indice inválido");
+            return null;
+        }
+    }
+
+
+    //Metodo para retornar o tamanho do cardápio
+    public int tamanhoCardapio() {
+        return cardapio.size();
+    }
+
+
 }

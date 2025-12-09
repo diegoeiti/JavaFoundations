@@ -9,14 +9,10 @@ public class Lanche {
         this.preco = preco;
     }
 
-    //getters
-    public String getNome() {
-        return nome;
+    @Override
+    public String toString() {
+        return " Lanche: " +
+                nome + "  |  " +
+                "Preco: " + preco;
     }
-
-    public double getPreco() {
-        return preco;
-    }
-
-
 }
