@@ -13,8 +13,9 @@ public class MenuLanches {
     }
 
     public void exibirLanches() {
+        System.out.println(" ID | LANCHES | PREÇO |");
         for (int i = 0; i<cardapio.size(); i++) {
-            System.out.println("ID " + i + cardapio.get(i).toString());
+            System.out.println( i + cardapio.get(i).toString());
         }
     }
 
