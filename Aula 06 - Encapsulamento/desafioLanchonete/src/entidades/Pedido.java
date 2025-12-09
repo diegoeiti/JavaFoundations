@@ -2,8 +2,8 @@ package entidades;
 
 public class Pedido {
     private String nomeLanche;
-    private int quantidade;
     private double precoUnitario;
+    private int quantidade;
 
     public Pedido(String nomeLanche, int quantidade, double precoUnitario) {
         this.nomeLanche = nomeLanche;

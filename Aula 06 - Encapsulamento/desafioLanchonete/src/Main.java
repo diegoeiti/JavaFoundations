@@ -35,7 +35,7 @@ public class Main {
                     sc.nextLine();
 
                     var lanche = menuLanches.getLanche(opcaoLanche);
-                    Pedido pedido = new Pedido(lanche.getNome(), quantidade, lanche.getPreco());
+                    Pedido pedido = new Pedido(lanche.getNome(), lanche.getPreco(), quantidade);
                 }
 
             }
