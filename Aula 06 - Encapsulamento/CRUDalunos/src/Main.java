@@ -40,9 +40,49 @@ public class Main {
 
                 }
 
+            case 2 -> {
+                gerenciarAlunos.listarAlunos();
+            }
+
+            case 3 -> {
+                    gerenciarAlunos.listarAlunos();
+                System.out.println("Digite o id do aluno: ");
+                int id = sc.nextInt();
+                sc.nextLine();
+
+                System.out.println("Digite o nome do aluno: ");
+                String nomeAluno = sc.nextLine();
+
+                System.out.println("Digite a nota do aluno: ");
+                double notaAluno = sc.nextDouble();
+                sc.nextLine();
+
+                System.out.println("Digite a nota2 do aluno: ");
+                double notaAluno2 = sc.nextDouble();
+                sc.nextLine();
+
+                gerenciarAlunos.atualizarAluno(id, nomeAluno, notaAluno, notaAluno2);
+            }
+
+            case 4 -> {
+                gerenciarAlunos.listarAlunos();
+                System.out.println("Digite o id do aluno: ");
+                int id = sc.nextInt();
+                sc.nextLine();
+                gerenciarAlunos.removerAluno(id);
+            }
+            case 5 -> {
+                System.out.println("Programa finalizado com sucesso");
+                return;
+            }default -> {
+                    System.out.println("Escolha uma opcao válida");
+                }
+
+
+
             }
         }
 
-        sc.close();
+
     }
 }
