@@ -58,21 +58,41 @@ public class Main {
                     int id = sc.nextInt();
                     sc.nextLine();
 
+
+                    // Obtém o pedido escolhido pela ID.
                     var pedidoEscolhido = listaPedido.getPedido(id);
+
                     menu.exibirCardapio();
 
-                    System.out.println("Digite o novo lanche: ");
-                    int novoLanche =  sc.nextInt();
+                    System.out.println("Digite o ID do novo lanche: ");
+                    int novoLancheID =  sc.nextInt();
                     sc.nextLine();
+
+                    // Recupera o novo lanche escolhido a partir do cardápio
+                    var novoLanche = menu.getCardapio(novoLancheID);
 
                     System.out.println("Digite a nova quantidade: ");
                     int novaQuantidade = sc.nextInt();
                     sc.nextLine();
 
-                    Pedido pedido = new Pedido()
+                    pedidoEscolhido.setNomeLanche(novoLanche.getNome());
+                    pedidoEscolhido.setQuantidade(novaQuantidade);
+                    pedidoEscolhido.setPreco(novoLanche.getPrecoUnitario());
 
+                    System.out.println("Pedido atualizado com sucesso!");
                 }
 
+                case 4 -> {
+                    System.out.println("Digite o ID do pedido que deseja excluir: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+
+                    listaPedido.removerPedido(id);
+                }
+
+                case 5 -> {
+                    
+                }
 
             }
         }

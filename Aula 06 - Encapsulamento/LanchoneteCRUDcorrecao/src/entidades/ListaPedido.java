@@ -24,4 +24,9 @@ public class ListaPedido {
     public Pedido getPedido(int i) {
         return pedidos.get(i);
     }
+
+    public void removerPedido(int i) {
+        pedidos.remove(i);
+        System.out.println("Pedido removido com sucesso!");
+    }
 }
