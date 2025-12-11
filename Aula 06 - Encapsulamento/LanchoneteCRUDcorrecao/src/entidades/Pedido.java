@@ -50,7 +50,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return " | " + nomeLanche + " | " + quantidade + " | " + preco + " | " + calcularTotal();
+        return " | " + nomeLanche + " | " + quantidade + " | R$" + preco + " | R$" + calcularTotal();
     }
 
 

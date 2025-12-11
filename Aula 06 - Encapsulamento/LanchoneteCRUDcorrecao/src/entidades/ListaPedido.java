@@ -29,4 +29,12 @@ public class ListaPedido {
         pedidos.remove(i);
         System.out.println("Pedido removido com sucesso!");
     }
+
+    public double calcularValorTotal() {
+        double total = 0;
+        for (Pedido pedido : pedidos) {
+            total += pedido.calcularTotal();
+        }
+        return total;
+    }
 }

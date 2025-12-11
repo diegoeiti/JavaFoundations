@@ -91,8 +91,15 @@ public class Main {
                 }
 
                 case 5 -> {
-                    
+                    System.out.println("O valor total foi: R$" + listaPedido.calcularValorTotal());
+
                 }
+
+                case 6 -> {
+                    System.out.println("Finalizando o programa...");
+                    return;
+                }
+
 
             }
         }

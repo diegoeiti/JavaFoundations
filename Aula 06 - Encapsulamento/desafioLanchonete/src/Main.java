@@ -38,6 +38,10 @@ public class Main {
                     Pedido pedido = new Pedido(lanche.getNome(), quantidade, lanche.getPreco());
                 }
 
+                case 2 -> {
+                    gerenciadorPedido.
+                }
+
             }
         }
 

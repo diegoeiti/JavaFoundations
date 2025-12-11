@@ -35,6 +35,6 @@ public class Lanche {
     @Override
     public String toString() {
         return " | " + nome +
-                " | " +  precoUnitario + " | ";
+                " | R$" +  precoUnitario + " | ";
     }
 }
