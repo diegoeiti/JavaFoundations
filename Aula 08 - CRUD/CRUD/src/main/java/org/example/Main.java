@@ -10,6 +10,8 @@ public class Main {
         GerenciarAlunos gerenciarAlunos = new GerenciarAlunos();
         Aluno aluno1 = new Aluno("Diego", 10,10);
 
-        gerenciarAlunos.cadastroAluno(aluno1);
+        //gerenciarAlunos.cadastroAluno(aluno1);
+
+        gerenciarAlunos.excluirAluno(1);
     }
 }

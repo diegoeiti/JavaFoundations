@@ -47,7 +47,7 @@ public class GerenciarAlunos {
             stmt.setInt(1, id);
             stmt.executeUpdate();
             System.out.println("Aluno excluido com sucesso!");
-            
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
