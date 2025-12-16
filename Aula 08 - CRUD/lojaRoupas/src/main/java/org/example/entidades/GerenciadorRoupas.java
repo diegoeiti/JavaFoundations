@@ -1,9 +1,6 @@
 package org.example.entidades;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class GerenciadorRoupas {
     private final String url = "jdbc:mysql://localhost:3306/loja";
@@ -69,6 +66,28 @@ public class GerenciadorRoupas {
         stmt.execute();
         stmt.close();
         System.out.println("Atualizado com sucesso!");
+    }
 
+    //Metodo para listar todas as roupas da tabela
+    public void listarRoupas() throws SQLException {
+        String sql = "SELECT * FROM roupas";
+
+        try {
+            Connection conexao = getConnection();
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String marca = rs.getString("marca");
+                String tipo = rs.getString("tipo");
+                String tamanho = rs.getString("tamanho");
+                int quantidade = rs.getInt("quantidade");
+                double preco = rs.getDouble("preco");
+                System.out.println(id + " | " + marca + " | " + tipo + " | " +  tamanho + " | " + quantidade + " | " + preco);
+            }
+            } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
 }

@@ -1,9 +1,6 @@
 package org.example.entidades;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class GerenciarAlunos {
 
@@ -73,6 +70,29 @@ public class GerenciarAlunos {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void listarAlunos(){
+        String sql = "SELECT * FROM alunos";
+
+        try {
+            Connection conexao = conectar();
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                System.out.println(
+                        " | " + rs.getInt("id") + " | " + rs.getString("nome") + " | "  + rs.getDouble("nota") + " | " + rs.getDouble("nota2") + " | " + calcularMedia(rs.getDouble("nota"), rs.getDouble("nota2"))
+                );
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private double calcularMedia(double nota, double nota2) {
+        return (nota + nota2)/2;
     }
 
 
