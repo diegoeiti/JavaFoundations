@@ -37,8 +37,38 @@ public class GerenciadorRoupas {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+    //Metodo para excluir roupas
+    public void excluirRoupa(int id) throws SQLException {
 
+        String sql = "DELETE FROM roupas WHERE id = ?";
 
+        Connection conexao = getConnection();
+        PreparedStatement stmt = conexao.prepareStatement(sql);
+        try {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            System.out.println("Removido com sucesso!");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    //Metodo para atualizar valores do cadastro
+    public void atualizarRoupa(int id, String marca, String tipo, String tamanho, int quantidade, double preco) throws SQLException {
+        String sql  = "UPDATE roupas SET marca = ?, tipo = ?, tamanho = ?, quantidade = ?, preco = ? WHERE  id = ?";
+
+        Connection conexao = getConnection();
+        PreparedStatement stmt = conexao.prepareStatement(sql);
+        stmt.setString(1, marca);
+        stmt.setString(2, tipo);
+        stmt.setString(3, tamanho);
+        stmt.setInt(4, quantidade);
+        stmt.setDouble(5, preco);
+        stmt.setInt(6, id);
+        stmt.execute();
+        stmt.close();
+        System.out.println("Atualizado com sucesso!");
 
     }
 }
