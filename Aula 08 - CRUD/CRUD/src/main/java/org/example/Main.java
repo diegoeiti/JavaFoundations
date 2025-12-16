@@ -1,7 +1,6 @@
 package org.example;
 
-import org.example.entidades.Aluno;
-import org.example.entidades.GerenciarAlunos;
+import org.example.entidades.*;
 
 import java.sql.SQLException;
 
@@ -10,8 +9,6 @@ public class Main {
         GerenciarAlunos gerenciarAlunos = new GerenciarAlunos();
         Aluno aluno1 = new Aluno("Diego", 10,10);
 
-        //gerenciarAlunos.cadastroAluno(aluno1);
-
-        gerenciarAlunos.excluirAluno(1);
+        gerenciarAlunos.alterarAluno(2, "DiegoEiti", 10, 1);
     }
 }

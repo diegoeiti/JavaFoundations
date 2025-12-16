@@ -53,4 +53,28 @@ public class GerenciarAlunos {
         }
     }
 
+    public void alterarAluno(int id, String nome, double nota, double nota2) {
+
+        String sql = "UPDATE alunos SET  nome = ?, nota = ?, nota2 = ? WHERE id = ?";
+
+        try{
+            Connection conexao = conectar();
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+
+            stmt.setString(1, nome);
+            stmt.setDouble(2, nota);
+            stmt.setDouble(3, nota2);
+            stmt.setInt(4, id);
+
+            stmt.executeUpdate();
+            stmt.close();
+            System.out.println("Aluno alterado com sucesso!");
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+
 }
