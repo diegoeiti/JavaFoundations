@@ -35,9 +35,41 @@ public class Main {
                         sc.nextLine();
 
                         Aluno aluno = new Aluno(nome, nota, nota2);
+                        ga.cadastroAluno(aluno);
+                    }
+                    case 2 -> {
+                        ga.listarAlunos();
+                    }
+                    case 3 -> {
+                        ga.listarAlunos();
+                        System.out.println("Digite o id do aluno que deseja atualizar: ");
+                        int id = sc.nextInt();
+                        sc.nextLine();
 
+                        System.out.println("Digite o novo nome: ");
+                        String nome = sc.nextLine();
+                        sc.nextLine();
 
+                        System.out.println("Digite a nova nota: ");
+                        double nota = sc.nextDouble();
+                        sc.nextLine();
 
+                        System.out.println("Digite a nova nota 2: ");
+                        double nota2 = sc.nextDouble();
+                        sc.nextLine();
+
+                        ga.alterarAluno(id, nome, nota, nota2);
+                    }
+                    case 4 -> {
+                        ga.listarAlunos();
+                        System.out.println("Digite o id do aluno que deseja excluir: ");
+                        int id = sc.nextInt();
+                        sc.nextLine();
+                        ga.excluirAluno(id);
+                    }
+                    case 5 -> {
+                        System.out.println("Saindo do programa...");
+                        return;
                     }
                 }
             }
