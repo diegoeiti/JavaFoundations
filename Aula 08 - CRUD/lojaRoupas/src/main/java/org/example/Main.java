@@ -25,24 +25,6 @@ public class Main {
             sc.nextLine();
 
             switch (opcao) {
-                case 1 -> {
-                    System.out.println("Digite o nome do aluno: ");
-                    String nome = sc.nextLine();
-                    sc.nextLine();
-
-                    System.out.println("Digite a nota do aluno: ");
-                    double nota = sc.nextDouble();
-                    sc.nextLine();
-
-                    System.out.println("Digite a nota 2 do aluno: ");
-                    double nota2 = sc.nextDouble();
-                    sc.nextLine();
-
-                    Aluno aluno = new Aluno(nome, nota, nota2);
-                    gerenciadorRoupas.cadastrarAluno(aluno);
-
-
-                }
             }
         }
 
