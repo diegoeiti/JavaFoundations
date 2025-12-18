@@ -6,6 +6,8 @@ import com.example.lojaroupa.model.RoupaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 //Controller - Responsavel por receber as requisicoes em HTTP (metodos)
 // Rest - API rest
 
@@ -29,5 +31,10 @@ public class ControllerRoupa {
     @PostMapping
     public void cadastrarRoupa(@RequestBody DadosRoupa dadosRoupa) {
         roupaRepository.save(new Roupa(dadosRoupa));
+    }
+
+    @GetMapping
+    public List<Roupa> listarRoupas() {
+        return roupaRepository.findAll();
     }
 }
