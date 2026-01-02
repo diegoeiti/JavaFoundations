@@ -254,12 +254,37 @@
       atualizarDashboard();
     }
 
+
+    // Variável global (Solta no script)
+    let idParaExcluir = null;
+
+    // A função que APENAS abre o modal (Substitui a antiga)
     async function excluirRoupa(id) {
-      if (confirm("Deseja realmente excluir?")) {
-        await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
-        initConsulta();
-      }
+      idParaExcluir = id; // Guarda o ID para o botão do modal saber quem apagar
+      const meuModal = new bootstrap.Modal(document.getElementById('modalExcluir'));
+      meuModal.show(); // Abre o modal bonito
     }
+
+    // O bloco de escuta(Solto no script, fora de qualquer function)
+    document.addEventListener('click', async (e) => {
+      if (e.target && e.target.id === 'btnConfirmarExclusao') {
+        if (idParaExcluir) {
+          try {
+            await fetch(`${API_URL}/${idParaExcluir}`, { method: 'DELETE' });
+
+            // Fecha o modal encontrando a instância aberta
+            const modalElement = document.getElementById('modalExcluir');
+            const modalInstancia = bootstrap.Modal.getInstance(modalElement);
+            modalInstancia.hide();
+
+            initConsulta(); // Atualiza a tabela
+            idParaExcluir = null; // Limpa o ID
+          } catch (error) {
+            alert("Erro ao excluir: " + error.message);
+          }
+        }
+      }
+    });
 
     function prepararEdicao(p) {
       idEdicao = p.id;
@@ -311,6 +336,25 @@
       });
     }
   </script>
+
+  <div class="modal fade" id="modalExcluir" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-danger text-white border-0">
+          <h5 class="modal-title"><i class="bi bi-exclamation-triangle me-2"></i>Confirmar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <h5>Deseja realmente excluir esta roupa?</h5>
+          <p class="text-muted">Esta ação não poderá ser desfeita.</p>
+        </div>
+        <div class="modal-footer border-0 justify-content-center pb-4">
+          <button type="button" class="btn btn-light px-4" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="btnConfirmarExclusao" class="btn btn-danger px-4">Sim, Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
