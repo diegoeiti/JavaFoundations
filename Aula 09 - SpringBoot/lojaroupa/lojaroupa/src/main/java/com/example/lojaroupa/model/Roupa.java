@@ -1,6 +1,7 @@
 package com.example.lojaroupa.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,11 +11,11 @@ import lombok.Setter;
 // Informa que a classe Roupa é uma entidade JPA
 // JPA (Mapeia a classe para o banco)
 @Entity(name = "Roupa")
+
 // Lombok
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 
 public class Roupa {
 
@@ -22,7 +23,7 @@ public class Roupa {
     @Id
     //Informa que o banco gera o valor do ID
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String marca;
     private String tipo;
     private String tamanho;

@@ -43,4 +43,19 @@ public class ControllerRoupa {
         roupaRepository.deleteById(id);
         return "Roupa com ID " + id + " deletada com sucesso!";
     }
+
+    @PutMapping("/{id}")
+    public Roupa atualizar(@PathVariable Long id, @RequestBody Roupa roupaAtualizada) {
+        // 1. Procuramos a roupa no banco pelo ID
+        return roupaRepository.findById(id).map(roupa -> {
+            // 2. Atualizamos os dados com o que veio do Postman
+            roupa.setMarca(roupaAtualizada.getMarca());
+            roupa.setTipo(roupaAtualizada.getTipo());
+            roupa.setTamanho(roupaAtualizada.getTamanho());
+            roupa.setPreco(roupaAtualizada.getPreco());
+            roupa.setQuantidade(roupaAtualizada.getQuantidade());
+            // 3. Salvamos a roupa atualizada
+            return roupaRepository.save(roupa);
+        }).orElseThrow(() -> new RuntimeException("Roupa não encontrada"));
+    }
 }
