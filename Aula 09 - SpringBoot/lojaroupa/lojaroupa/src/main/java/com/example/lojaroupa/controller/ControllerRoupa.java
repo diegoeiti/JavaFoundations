@@ -37,4 +37,10 @@ public class ControllerRoupa {
     public List<Roupa> listarRoupas() {
         return roupaRepository.findAll();
     }
+
+    @DeleteMapping("/{id}")
+    public String deletar(@PathVariable Long id) {
+        roupaRepository.deleteById(id);
+        return "Roupa com ID " + id + " deletada com sucesso!";
+    }
 }
