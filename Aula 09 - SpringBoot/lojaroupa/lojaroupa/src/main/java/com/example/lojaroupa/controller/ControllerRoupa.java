@@ -20,8 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/roupas") //Defina a URL do controller
 //http://localhost:8080/roupas
-
-@CrossOrigin(origins ="*")
+@CrossOrigin(origins ="*")// Isso permite que o index.html acesse a API
 public class ControllerRoupa {
 
     @Autowired
