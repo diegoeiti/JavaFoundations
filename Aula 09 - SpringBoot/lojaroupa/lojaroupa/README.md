@@ -29,7 +29,7 @@ CREATE DATABASE loja;
 ## 2. Configuração do Projeto
 No arquivo src/main/resources/application.properties, configure as credenciais do seu banco:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/loja_roupas
+spring.datasource.url=jdbc:mysql://localhost:3306/loja
 
 spring.datasource.username=seu_usuario_root
 
@@ -66,6 +66,7 @@ src/main/java/com/example/lojaroupa/
 └── RoupaRepository.java     # Interface de acesso ao banco (JPA)
 
 src/main/resources/
+
 └── application.properties       # Configurações do Spring e Banco de Dados
 
 ## Contribuindo
