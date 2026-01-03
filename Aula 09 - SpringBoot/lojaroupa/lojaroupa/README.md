@@ -1,15 +1,15 @@
-# 👔 Sistema de Gerenciamento de Loja de Roupas (Spring Boot)
+#  Sistema de Gerenciamento de Loja de Roupas (Spring Boot)
 
 Este é um projeto desenvolvido em **Java** com o framework **Spring Boot** focado no controle operacional de uma loja de vestuário. O sistema utiliza **MySQL** para persistência de dados, utilizando o **Spring Data JPA** para facilitar a manipulação do inventário, preços e registros de produtos.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 * **Gerenciamento de Produtos:** CRUD completo (Cadastro, Listagem, Edição e Exclusão).
 * **Controle de Estoque:** Monitoramento das quantidades disponíveis via banco de dados.
 * **Integração com MySQL:** Persistência de dados configurada via Spring Data JPA.
 * **API REST:** Estrutura preparada para receber requisições HTTP através de Controllers.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠Tecnologias Utilizadas
 
 * **Linguagem:** Java (JDK 17 ou superior)
 * **Framework:** Spring Boot
@@ -17,7 +17,7 @@ Este é um projeto desenvolvido em **Java** com o framework **Spring Boot** foca
 * **ORM:** Spring Data JPA / Hibernate
 * **IDE:** IntelliJ IDEA (recomendada)
 
-## 📋 Configuração do Ambiente
+## Configuração do Ambiente
 
 ### 1. Banco de Dados
 Certifique-se de ter o MySQL instalado. Execute o script abaixo:
