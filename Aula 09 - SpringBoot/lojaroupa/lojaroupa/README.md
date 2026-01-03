@@ -29,13 +29,14 @@ CREATE DATABASE loja;
 ## 2. Configuração do Projeto
 No arquivo src/main/resources/application.properties, configure as credenciais do seu banco:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/loja
+```spring.datasource.url=jdbc:mysql://localhost:3306/loja
 
 spring.datasource.username=seu_usuario_root
 
 spring.datasource.password=sua_senha
 
 spring.jpa.hibernate.ddl-auto=update
+```
 
 ## Como Executar
 1. Clone este repositório:
