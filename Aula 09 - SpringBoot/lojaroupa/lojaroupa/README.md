@@ -30,8 +30,11 @@ CREATE DATABASE loja;
 No arquivo src/main/resources/application.properties, configure as credenciais do seu banco:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/loja_roupas
+
 spring.datasource.username=seu_usuario_root
+
 spring.datasource.password=sua_senha
+
 spring.jpa.hibernate.ddl-auto=update
 
 ## Como Executar
@@ -49,12 +52,19 @@ Execute a classe LojaroupaApplication.java.
  Estrutura do Projeto
 src/main/java/com/example/lojaroupa/
 ├── LojaroupaApplication.java    # Classe principal do Spring Boot
+
 ├── controller/
+
 │   └── ControllerRoupa.java     # Endpoints da API
+
 └── model/
+
 ├── Roupa.java               # Entidade JPA
+
 ├── DadosRoupa.java          # DTO (Data Transfer Object)
+
 └── RoupaRepository.java     # Interface de acesso ao banco (JPA)
+
 src/main/resources/
 └── application.properties       # Configurações do Spring e Banco de Dados
 
