@@ -9,7 +9,7 @@ Este é um projeto desenvolvido em **Java** com o framework **Spring Boot** foca
 * **Integração com MySQL:** Persistência de dados configurada via Spring Data JPA.
 * **API REST:** Estrutura preparada para receber requisições HTTP através de Controllers.
 
-## 🛠Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Linguagem:** Java (JDK 17 ou superior)
 * **Framework:** Spring Boot
