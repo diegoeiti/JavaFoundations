@@ -39,7 +39,7 @@ spring.jpa.hibernate.ddl-auto=update
 ## Como Executar
 1. Clone este repositório:
 
-git clone [https://github.com/diegoeiti/JavaFoundations.git](https://github.com/diegoeiti/JavaFoundations.git)
+```bash git clone [https://github.com/diegoeiti/JavaFoundations.git](https://github.com/diegoeiti/JavaFoundations.git) ```
 cd JavaFoundations/Aula%2009%20-%20SpringBoot
 
 2. Execute o projeto:
@@ -49,43 +49,28 @@ Importe na sua IDE como um projeto Maven.
 Execute a classe LojaroupaApplication.java.
 
  Estrutura do Projeto
-src/main/java/com/example/lojaroupa/
-├── LojaroupaApplication.java    # Classe principal do Spring Boot
-
-├── controller/
-
-│   └── ControllerRoupa.java     # Endpoints da API
-
-└── model/
-
-├── Roupa.java               # Entidade JPA
-
-├── DadosRoupa.java          # DTO (Data Transfer Object)
-
-└── RoupaRepository.java     # Interface de acesso ao banco (JPA)
-
-src/main/resources/
-
-└── application.properties       # Configurações do Spring e Banco de Dados
+```text 
+src/main/java/com/example/lojaroupa/ ├── LojaroupaApplication.java # Classe principal do Spring Boot ├── controller/ │ └── ControllerRoupa.java # Endpoints da API └── model/ ├── Roupa.java # Entidade JPA ├── DadosRoupa.java # DTO (Data Transfer Object) └── RoupaRepository.java # Interface de acesso ao banco (JPA) src/main/resources/ └── application.properties # Configurações do Spring e Banco de Dados 
+```
 
 ## Contribuindo
 
-Faça um Fork do projeto
+* Faça um Fork do projeto
 
-Crie uma branch (git checkout -b feature/nova-funcionalidade)
+* Crie uma branch (git checkout -b feature/nova-funcionalidade)
 
-Commit suas alterações (git commit -m 'Adiciona nova funcionalidade')
+* Commit suas alterações (git commit -m 'Adiciona nova funcionalidade')
 
-Push para a branch (git push origin feature/nova-funcionalidade)
+* Push para a branch (git push origin feature/nova-funcionalidade)
 
-Abra um Pull Request
+* Abra um Pull Request
 
 Desenvolvido por Diego Eiti Nakashima Fortunato Projeto de portfólio para fins acadêmicos e profissionais.
 
 📧 Contato: diegoeiti96@gmail.com
 
-🔗 LinkedIn: https://www.linkedin.com/in/diego-eiti-nakashima-fortunato-83852b227/
+🔗 LinkedIn: [Meu LinkedIn](https://www.linkedin.com/in/diego-eiti-nakashima-fortunato-83852b227/)
 
-🔗 Repositório: https://github.com/diegoeiti/JavaFoundations/tree/main/Aula%2009%20-%20SpringBoot
+🔗 Repositório: [Link do Projeto](https://github.com/diegoeiti/JavaFoundations/tree/main/Aula%2009%20-%20SpringBoot)
 
 
