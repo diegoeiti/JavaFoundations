@@ -64,7 +64,6 @@ src/main/java/com/example/lojaroupa/
     └── RoupaRepository.java     # Interface de acesso ao banco (JPA)
 src/main/resources/
 └── application.properties       # Configurações do Spring e Banco de Dados
-
 ```
 
 ## Contribuindo
