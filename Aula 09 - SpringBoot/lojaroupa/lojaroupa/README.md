@@ -74,7 +74,8 @@ src/main/resources/
 * Push para a branch (git push origin feature/nova-funcionalidade)
 * Abra um Pull Request
 
-Desenvolvido por Diego Eiti Nakashima Fortunato Projeto de portfólio para fins acadêmicos e profissionais.
+Desenvolvido por Diego Eiti Nakashima Fortunato 
+Projeto de portfólio para fins acadêmicos e profissionais.
 
 📧 Contato: diegoeiti96@gmail.com
 
