@@ -40,7 +40,7 @@ spring.jpa.hibernate.ddl-auto=update
 1. Clone este repositório:
 
 ```bash 
-git clone [https://github.com/diegoeiti/JavaFoundations.git](https://github.com/diegoeiti/JavaFoundations.git) ```
+git clone [https://github.com/diegoeiti/JavaFoundations.git](https://github.com/diegoeiti/JavaFoundations.git) 
 cd JavaFoundations/Aula%2009%20-%20SpringBoot
 ```
 
