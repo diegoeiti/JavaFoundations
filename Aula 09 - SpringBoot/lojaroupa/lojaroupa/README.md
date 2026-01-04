@@ -39,8 +39,10 @@ spring.jpa.hibernate.ddl-auto=update
 ## Como Executar
 1. Clone este repositório:
 
-```bash git clone [https://github.com/diegoeiti/JavaFoundations.git](https://github.com/diegoeiti/JavaFoundations.git) ```
+```bash 
+git clone [https://github.com/diegoeiti/JavaFoundations.git](https://github.com/diegoeiti/JavaFoundations.git) ```
 cd JavaFoundations/Aula%2009%20-%20SpringBoot
+```
 
 2. Execute o projeto:
 
@@ -48,9 +50,21 @@ Importe na sua IDE como um projeto Maven.
 
 Execute a classe LojaroupaApplication.java.
 
- Estrutura do Projeto
-```text 
-src/main/java/com/example/lojaroupa/ ├── LojaroupaApplication.java # Classe principal do Spring Boot ├── controller/ │ └── ControllerRoupa.java # Endpoints da API └── model/ ├── Roupa.java # Entidade JPA ├── DadosRoupa.java # DTO (Data Transfer Object) └── RoupaRepository.java # Interface de acesso ao banco (JPA) src/main/resources/ └── application.properties # Configurações do Spring e Banco de Dados 
+
+## Estrutura do Projeto
+
+```text
+src/main/java/com/example/lojaroupa/
+├── LojaroupaApplication.java    # Classe principal do Spring Boot
+├── controller/
+│   └── ControllerRoupa.java     # Endpoints da API
+└── model/
+    ├── Roupa.java               # Entidade JPA
+    ├── DadosRoupa.java          # DTO (Data Transfer Object)
+    └── RoupaRepository.java     # Interface de acesso ao banco (JPA)
+src/main/resources/
+└── application.properties       # Configurações do Spring e Banco de Dados
+
 ```
 
 ## Contribuindo
