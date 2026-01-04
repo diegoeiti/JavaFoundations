@@ -69,13 +69,9 @@ src/main/resources/
 ## Contribuindo
 
 * Faça um Fork do projeto
-
 * Crie uma branch (git checkout -b feature/nova-funcionalidade)
-
 * Commit suas alterações (git commit -m 'Adiciona nova funcionalidade')
-
 * Push para a branch (git push origin feature/nova-funcionalidade)
-
 * Abra um Pull Request
 
 Desenvolvido por Diego Eiti Nakashima Fortunato Projeto de portfólio para fins acadêmicos e profissionais.
